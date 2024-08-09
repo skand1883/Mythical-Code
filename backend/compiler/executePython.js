@@ -13,7 +13,7 @@ const executePy = (filepath, inputData) => {
   const outPath = path.join(playgroundPath, `${jobId}.out`);
   const inputPath = path.join(playgroundPath, `${jobId}.txt`);
 
-  const command = `touch ${inputPath} && echo "${inputData}" > ${inputPath} && python ${filepath} < ${inputPath}`;
+  const command = `echo > ${inputPath} && echo ${inputData} > ${inputPath} && python ${filepath} < ${inputPath}`;
 
   return new Promise((resolve, reject) => {
     exec(

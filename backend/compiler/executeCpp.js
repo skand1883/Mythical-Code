@@ -9,27 +9,20 @@ if (!fs.existsSync(playgroundPath)) {
 }
 
 const executeCpp = (filepath, inputData) => {
+  
   const jobId = path.basename(filepath).split(".")[0];
   const outPath = path.join(playgroundPath, `${jobId}.out`);
   const inputPath = path.join(playgroundPath, `${jobId}.txt`);
 
-  // console.log(jobId);
-  // console.log(playgroundPath);
-  // console.log(inputPath);
-  // console.log(filepath);
-
-  inputData = inputData.replace(/\n/g, " ");
+  if(inputData) inputData = inputData.replace(/\n/g, " ");
 
   // const command = `touch "${inputPath}" && echo ${inputData} > "${inputPath}"`;
 
   // const command = `touch "${inputPath}" && echo ${inputData} > "${inputPath}" && g++ "${filepath}" -o "${outPath}" && "${outPath}" < "${inputPath}"`;
 
-  const command = `echo ${inputData} > "${inputPath}" && g++ "${filepath}" -o "${outPath}" && timeout /T 5 /NOBREAK && "${outPath}" < "${inputPath}"  `;
+  const command = `echo ${inputData} > "${inputPath}" && g++ "${filepath}" -o "${outPath}" && "${outPath}" < "${inputPath}"  `;
   
 
-  // console.log("hello");
-  // console.log(inputData);
-  // console.log("hello");
   return new Promise((resolve, reject) => {
     exec(
       command,

@@ -6,8 +6,6 @@ const runCodeController = async (req, res) => {
     try {
         const { lang, code, input } = req.body;
 
-        console.log(code);
-
         if (!code) {
             res.status(400).json({ "message": "Empty Code Body" });
             return;
@@ -20,17 +18,31 @@ const runCodeController = async (req, res) => {
         if (lang === "cpp") {
             const output = await executeCpp(filePath, input);
             //console.log(output);
-            return res.status(200).json(output);
+            return res.status(200).json({
+                success: true,
+                message: "Code executed successfully",
+                output
+            });
         }
 
         if(lang == "py") {
             const output = await executePy(filePath, input);
-            return res.status(200).json(output);
+            return res.status(200).json({
+                success: true,
+                message: "Code executed successfully",
+                output
+            });
         }
 
-        return res.status(200).json("failed");
+        return res.status(200).json({
+            success: false,
+            message: "Something went wrong while executing code"
+        });
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json({
+            success: false,
+            message: "Internal server error",
+        });
     }
 }
 

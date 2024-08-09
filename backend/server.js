@@ -14,6 +14,7 @@ const cors = require('cors');
 // const loginRoute = require("./routes/userRoutes/loginRoute");
 // const getProblemRoute = require("./routes/userRoutes/getProblemRoute");
 const runCodeRoute = require("./routes/runCode");
+const problemsRoute = require("./routes/problemsRoute");
 // const checkProblemRoute = require("./routes/userRoutes/checkProblemRoute");
 // const leaderBoardRoute = require("./routes/userRoutes/leaderBoardRoute");
 // const checkAcceptanceRoute= require("./routes/userRoutes/checkAcceptanceRoute");
@@ -23,15 +24,14 @@ const runCodeRoute = require("./routes/runCode");
 // const editProblemRoute = require("./routes/adminRoutes/editProblemRoute");
 
 // Allow cross-origin requests from http://localhost:3000 with specific headers and methods
-app.use(cors({
-    // origin: 'http://localhost:3000',
-    origin: 'https://64739edf2285590008ba9f99--codegeass.netlify.app',
-    methods: '*',
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(
+    cors({
+        origin: "*",
+    })
+);
 
 // Connect to database
-// require('./db/conn');
+require('./config/db');
 
 // Parse request bodies as JSON
 app.use(express.json());
@@ -39,11 +39,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Use user routes
-// app.use("/api/", getUserRoute);
-// app.use("/api/", signupRoute);
-// app.use("/api/", loginRoute);
-// app.use("/api/", getAllProblemsRoute);
-// app.use("/api/", getProblemRoute);
+app.use('/api', problemsRoute);
 app.use("/api/", runCodeRoute);
 // app.use("/api/", checkProblemRoute);
 // app.use("/api/", leaderBoardRoute);
