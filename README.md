@@ -1,7 +1,7 @@
-Mythical-Code
+#Mythical-Code
 Mythical-Code is an innovative online coding platform designed for developers to write, execute, and experiment with code. The platform features a robust code editor, a Coding Arena for practice, and a Coding Battleground for competitive coding. Whether you're a beginner or an experienced coder, Mythical-Code provides the tools you need to enhance your coding skills and compete with others.
 
-Table of Contents
+#Table of Contents
 Introduction
 Features
 Installation
@@ -11,24 +11,24 @@ Technologies Used
 Contributing
 License
 Credits
-Introduction
+#Introduction
 Mythical-Code is a platform that enables users to write and execute code in a seamless environment. The platform supports at least one compiled language and is designed to be simple and intuitive, with no need for user management features like login or profile creation. The platform is divided into three main areas: the Code Editor, Coding Arena, and Coding Battleground.
 
-Features
-Code Editor:
+#Features
+#Code Editor:
 
 A powerful code editor where users can write and execute code.
 Supports custom inputs and displays errors, outputs, and metrics like execution time and memory usage.
-Coding Arena:
+#Coding Arena:
 
 A space where users can practice coding by solving predefined problems.
 Users can also upload their own problems, complete with descriptions, constraints, and test cases.
-Coding Battleground:
+#Coding Battleground:
 
 A competitive environment where users can participate in coding contests.
 Includes real-time leaderboards to showcase top performers.
 Allows users to host their own contests.
-Installation
+#Installation
 Follow these steps to set up the Mythical-Code platform locally:
 
 Clone the repository:
