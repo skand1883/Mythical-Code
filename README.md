@@ -90,23 +90,11 @@ Once the platform is set up:
 
 Explore the different features by navigating through the Code Editor, Coding Arena, and Coding Battleground.
 
-## Project Structure
+# Mythical-Code Project Structure
 
 The project is organized into two main components:
-mythical-code/
-│
-├── backend/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ └── server.js
-│
-├── frontend/
-│ ├── src/
-│ ├── public/
-│ └── package.json
-│
-└── README.md
+
+
 
 
 ## Technologies Used
