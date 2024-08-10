@@ -93,7 +93,20 @@ Explore the different features by navigating through the Code Editor, Coding Are
 # Mythical-Code Project Structure
 
 The project is organized into two main components:
-
+mythical-code/
+│
+├── backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ └── server.js
+│
+├── frontend/
+│ ├── src/
+│ ├── public/
+│ └── package.json
+│
+└── README.md
 
 
 
