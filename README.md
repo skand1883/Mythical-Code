@@ -46,7 +46,7 @@ Follow these steps to set up the Mythical-Code platform locally:
 2. **Navigate to the project directory:**
 
     ```bash
-    cd mythical-code
+    cd Mythical-code
     ```
 
 3. **Install dependencies:**
