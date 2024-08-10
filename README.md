@@ -26,6 +26,7 @@
 - **Coding Arena:**
   - A space where users can practice coding by solving predefined problems.
   - Users can also upload their own problems, complete with descriptions, constraints, and test cases.
+  - In each problem there are two options  run on custom testcase , or submit.
 
 - **Coding Battleground:**
   - A competitive environment where users can participate in coding contests.
