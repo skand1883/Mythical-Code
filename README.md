@@ -10,7 +10,6 @@
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 - [Credits](#credits)
 
 ## Introduction
