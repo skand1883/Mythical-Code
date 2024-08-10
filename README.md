@@ -93,7 +93,6 @@ Explore the different features by navigating through the Code Editor, Coding Are
 ## Project Structure
 
 The project is organized into two main components:
-
 mythical-code/
 │
 ├── backend/
