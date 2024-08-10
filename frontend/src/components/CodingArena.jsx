@@ -25,6 +25,7 @@ const CodingArena = () => {
     }
     
     fetchData();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -41,7 +42,7 @@ const CodingArena = () => {
         {
           problems?.map((problem, idx) => (
             <div key={problem._id} className='flex items-center text-lg'>
-              <p className='w-[10%] p-3 border-r-2 border-r-black'>{idx+1}</p>
+              <p className='w-[10%] p-3 border-r-2 border-r-black text-center'>{idx+1}</p>
               <p className='w-full p-3 border-r-2 border-r-black'>{problem.title}</p>
               <Link to={`/codingArena/${problem._id}`} className='w-[15%] text-green-500 p-3 underline cursor-pointer text-center'>Solve</Link>
             </div>

@@ -38,10 +38,12 @@ const runCodeController = async (req, res) => {
             success: false,
             message: "Something went wrong while executing code"
         });
-    } catch (err) {
+    } catch (error) {
+        console.log(error);
         res.status(500).json({
             success: false,
             message: "Internal server error",
+            error
         });
     }
 }

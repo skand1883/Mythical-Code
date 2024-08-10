@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home loading={loading} setLoading={setLoading} />} />
         <Route path="/codingArena" element={<CodingArena />} />
-        <Route path="/codingArena/:id" element={<Problem />} />
+        <Route path="/codingArena/:id" element={<Problem loading={loading} setLoading={setLoading} />} />
       </Routes>
     </div>
   );

@@ -1,5 +1,5 @@
 const Problem = require("../models/Problem");
-const executeCpp = require('../compiler/executeCpp');
+const executeCpp = require('../judges/executeCpp');
 const executePy = require("../compiler/executePython");
 const generateFile = require('../compiler/generateFile');
 const path = require("path");
@@ -65,7 +65,7 @@ exports.getProblem = async (req, res) => {
         return res.status(500).json({
             success: false,
             message: "Internal server error"
-        })
+        });
     }
 };
 
@@ -91,16 +91,21 @@ exports.checkProblem = async (req, res) => {
 
 
         const filePath = await generateFile(lang, code);
-        var inputPath = `${path.join(__dirname, '../../inputs/')}`;
+        // console.log("File path", filePath);
+        
+        var inputPath = `${path.join(__dirname, '../inputs/')}`;
         inputPath=inputPath+`${slug}.txt`;
         let userOutput;
         if (lang === "cpp") {
+            console.log("input path", inputPath);
             userOutput = await executeCpp(filePath, inputPath);
         }
         else if (lang == "py") {
             userOutput = await executePy(filePath, inputPath);
         }
+        // console.log("aa", userOutput)
         userOutput = userOutput.trim();
+        // console.log("bb", userOutput)
         // console.log(userOutput);
         // console.log("---");
         // console.log(problem.output);
@@ -117,22 +122,23 @@ exports.checkProblem = async (req, res) => {
         if (userOutput === problem.output) {
             return res.status(200).json({
                 success: true,
-                message: "All test case passed"
+                message: "All test case passed",
+                output: userOutput
             })
         }
         else {
             return res.status(200).json({
                 success: false,
+                output: userOutput,
                 message: "Failing in Hidden Test Case",
             });
         }
-
-        return res.status(200).json(codeFilePath);
     } catch (error) {
         console.log(error);
         return res.status(500).json({
             success: false,
-            message: "Internal server error"
+            message: "Internal server error",
+            error,
         });
     }
 };
