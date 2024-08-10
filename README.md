@@ -90,7 +90,7 @@ Once the platform is set up:
 
 Explore the different features by navigating through the Code Editor, Coding Arena, and Coding Battleground.
 
-# Mythical-Code Project Structure
+# Project Structure
 
 The project is organized into two main components:
 mythical-code/
