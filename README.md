@@ -21,7 +21,8 @@
 
 - **Code Editor:**
   - A powerful code editor where users can write and execute code.
-  - Supports custom inputs and displays errors, outputs, and metrics like execution time and memory usage.
+  - Currently supports c++ only.
+  - Supports custom inputs and displays errors and outputs.
 
 - **Coding Arena:**
   - A space where users can practice coding by solving predefined problems.
@@ -30,7 +31,7 @@
 - **Coding Battleground:**
   - A competitive environment where users can participate in coding contests.
   - Includes real-time leaderboards to showcase top performers.
-  - Allows users to host their own contests.
+  - It allows users to host their own contests.
 
 ## Installation
 
@@ -125,9 +126,7 @@ Contributions are welcome! If you want to contribute:
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Credits
 
